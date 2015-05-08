@@ -35,6 +35,7 @@
     "test": "test"
   },
   "dependencies": {
+    "helpers": "git://github.com/leshy/nodejs-helpers.git",
     "escodegen": "git://github.com/Constellation/escodegen.git",
     "nopt": "~2.1.2"
   },
