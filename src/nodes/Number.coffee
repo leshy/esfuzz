@@ -10,21 +10,11 @@ class Number_ extends Node
         @value = 0
         do @formatInt
       =>
-        @value = randomInt 1e6
+        @value = randomInt 1000
         do @formatInt
       =>
-        @value = randomInt (Math.pow 2, 53) - 1
+        @value = randomInt 100 * 1000
         do @formatInt
-      =>
-        size = randomInt 20
-        base = (randomInt 200) / 100
-        @raw = "#{base}#{randomElement ['e', 'E']}#{size}"
-        @value = parseFloat @raw
-      => @value = Math.random()
-      =>
-        @raw = "#{Math.random()}".slice 1, 3 + randomInt 10
-        @value = parseFloat @raw
-      => @value = Math.random() * Math.pow 2, 16
     ])()
   formatInt: ->
     switch randomInt 10
